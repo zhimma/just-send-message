@@ -1,0 +1,25 @@
+{
+    "name": "zhimma/just-send-message",
+    "description": "推送消息到rabbitmq中",
+    "type": "library",
+    "require": {
+        "php-amqplib/php-amqplib": "^2.11"
+    },
+    "authors": [
+        {
+            "name": "zhimma",
+            "email": "mma5694@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Zhimma\\JustSendMessage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zhimma\\JustSendMessage\\Tests\\": "tests/"
+        }
+    }
+}
