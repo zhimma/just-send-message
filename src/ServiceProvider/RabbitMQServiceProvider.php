@@ -11,13 +11,14 @@ class RabbitMQServiceProvider extends ServiceProvider
     public function boot()
     {
     }
+
     public function register()
     {
-        if(config("rabbitmq")){
+        if (empty(Config("rabbitmq"))) {
             throw new \Exception("缺少必要配置【rabbitmq.php】");
         }
         //使用singleton绑定单例
-        $this->app->singleton('rabbitmq',function(){
+        $this->app->singleton('rabbitmq', function () {
             return new RabbitMQClient(config("rabbitmq"));
         });
     }
